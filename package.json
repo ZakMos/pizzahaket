@@ -4,16 +4,25 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "gh-pages": "^3.1.0",
+    "jquery": "^3.6.0",
     "nodemon": "^2.0.7",
     "npm": "^7.14.0",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
+    "react-bootstrap": "^1.6.0",
+    "react-card-flip": "^1.1.1",
     "react-dom": "^17.0.2",
+    "react-fullscreen-image": "^0.0.3",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "build": "react-scripts build npm-run-all build-css build-js",
+    "start": "react-scripts start npm-run-all",
+    "build-js": "react-scripts build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
