@@ -1,18 +1,23 @@
-import './App.css';
-import Main from './views/Main';
 import Header from './components/Header';
+import Main from './views/Main';
+import Products from './views/Products';
+import Contact from './views/Contact';
 import Footer from './components/Footer';
+import Menu from './views/Menu';
 
 function App() {
   return (
     <>
-    <div className="App">
-      <header className="App-header">
+      <header className="mb-auto">
         <Header />
       </header>
-      <Main />
+      <main className="main">
+        <Main />
+        <Products />
+        <Menu />
+        <Contact/>
+      </main>
       <Footer />
-    </div>
     </>
   );
 }
