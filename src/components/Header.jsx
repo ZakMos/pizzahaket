@@ -1,31 +1,53 @@
-import React from 'react'
+import React from 'react';
+import { MenuItems } from "../MenuItems.js";
+import logo from "../images/pizza-haket-logo01.png"
+import $ from 'jquery';
+class Header extends React.Component {
+  state = { clicked: false }
 
-const Header = () => {
-    return (
-        <>
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar w/ text</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-            </li>
+  handleClick = () => {
+    this.setState( {clicked: !this.state.clicked})
+  }
+
+  componentDidMount() { 
+    $(function() {
+      let withScroll = $(".noscroll");
+      $(window).scroll(function() {
+          let scroll = $(window).scrollTop();
+          if (scroll >= 200) {
+              withScroll.removeClass('noscroll').addClass("withscroll");
+          } else  {
+              withScroll.removeClass("withscroll").addClass('noscroll');
+          }
+      });
+  });
+  }
+  render () {
+    return ( 
+    <>
+    <div id="home"></div>
+    <header className="header">
+      <nav className="NavbarItems noscroll">
+      <img href="/#home" className="navbar-logo" src={logo} alt="pizza-haket-logo" />
+        <div className="menu-icon" onClick={this.handleClick}>
+          <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </div>
+        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+          {MenuItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <a className={item.cName} href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            )
+          })}
         </ul>
-    </div>
-  </div>
-</nav>
-        </>
-    )
+      </nav>
+    </header>
+    </>
+  );
+}
 }
 
 export default Header;
