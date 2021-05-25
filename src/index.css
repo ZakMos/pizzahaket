@@ -1,13 +1,332 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.hello1 {
+    color: red;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hello2 {
+    color: blue;
 }
+
+@font-face {
+    font-family: "PanPizza";
+    src: url("../src/fonts/panpizza.ttf");
+}
+
+:root {
+    --white-clr: #fff;
+    --black-clr: #000;
+    --background-clr: #ffac0c;
+    --hover-clr: #6d76f7;
+    --main-font: lobster;
+    --header-font: "PanPizza";
+
+}
+
+/* ===== header ===== */
+.navbar-logo {
+    height: 100%;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    /* margin-left: 1rem; */
+    cursor: pointer
+}
+
+.NavbarItems {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 1s ease;
+
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    color: var(--black-clr);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+    background-color: var(--hover-clr);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    color: var(--white-clr);
+}
+
+.fa-bars {
+    color: var(--black-clr);
+}
+
+
+.menu-icon {
+    display: none ;
+}
+
+.header {
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+    transition: all 15ms ease 0s;
+    top: 0;
+    right: 0;
+    left: auto;
+}
+
+.noscroll {
+    color: var(--black-clr);
+    transition: all 1s ease-in-out;
+}
+
+.withscroll {
+    background-color: var(--background-clr);
+}
+
+
+@media  screen and (Max-width: 960px) {
+    .NavbarItems {
+        position: relative;
+    }
+    
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background: var(--black-clr);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 10;
+    }
+
+    .nav-links {
+        color: var(--white-clr);
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: var(--background-clr);
+        border-radius: 0;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 0%);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    
+    .fa-times {
+        color: var(--white-clr);
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ===== main ===== */
+.backgroundImage {
+    background-image: url(./images/food05.jpg);
+    border: 0;
+    margin: 0 0 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-header-text {
+    display: inline-block;
+    position:absolute;
+    height: auto;
+    top: 35%;
+    align-items: center;
+    font-family: var(--header-font);
+    font-size: 10em;
+}
+
+
+
+
+
+/* ==== Products ==== */
+
+.products {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-title {
+    position: absolute;
+    background: var(--white-clr);
+    color: var(--black-clr);
+    font-size: 2em;
+    font-family: var(--main-font);
+    z-index: 2;
+	
+}
+
+.products-header {
+    color: var(--background-clr);
+    margin-top: 2em;
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 4em;
+}
+
+.products-image {
+    width: 400px;
+    height: 300px;
+    margin: 1em;
+    border: 5px solid var(--white-clr);
+   
+}
+.products-image:hover {
+    -webkit-animation: products-image 2s ease-out infinite both;
+    animation: products-image 2s ease-out infinite both;
+}
+
+@-webkit-keyframes products-image {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes products-image {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  
+
+  /* === menu === */
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+ 
+
+  /* === About Us === */
+
+.about-us-header {
+    color: var(--background-clr);
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 4em;
+    -webkit-animation: products-header 0.6s both;
+	        animation: products-header  0.6s both;
+}
+
+.aboutUs-oh{
+    background: var(--background-clr);
+    margin-top: 60px;
+    }
+    .business-hours {
+    background: #222; 
+    padding: 40px 14px;
+    margin-top: -15px;
+    position: relative;
+    }
+    .business-hours:before{
+    content: '';
+    width: 23px;
+    height: 23px;
+    background: #111;
+    position: absolute;
+    top: 5px;
+    left: -12px;
+    transform: rotate(-45deg);
+    z-index: -1;
+    }
+    .business-hours .title {
+    font-size: 20px;
+    color: #BBB;
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 4px solid var(--background-clr); 
+    }
+    .business-hours li {
+    color: #888;
+    line-height: 30px;
+    border-bottom: 1px solid #333; 
+    }
+    .business-hours li:last-child {
+    border-bottom: none; 
+    }
+    .business-hours .opening-hours li.today {
+    color: var(--background-clr); 
+    }
