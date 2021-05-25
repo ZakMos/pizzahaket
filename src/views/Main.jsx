@@ -1,14 +1,12 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
+import '../fonts/panpizza.ttf';
 
 const Main = () => {
     return (
         <>
-        <Container>
-            <Row>
-             <Col>This is Main</Col>
-             </Row>
-        </Container>
+        <div className="backgroundImage img-fluid" alt="Responsive image" >           
+                <h1 className="text-center main-header-text">Pizza Haket</h1>
+        </div>
         </>
     )
 }
