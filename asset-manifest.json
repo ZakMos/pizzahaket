@@ -1,22 +1,38 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/static/js/main.98e617c8.chunk.js",
-    "main.js.map": "/static/js/main.98e617c8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.80ad7c72.js",
-    "runtime-main.js.map": "/static/js/runtime-main.80ad7c72.js.map",
-    "static/js/2.d129daaf.chunk.js": "/static/js/2.d129daaf.chunk.js",
-    "static/js/2.d129daaf.chunk.js.map": "/static/js/2.d129daaf.chunk.js.map",
-    "static/js/3.14712dee.chunk.js": "/static/js/3.14712dee.chunk.js",
-    "static/js/3.14712dee.chunk.js.map": "/static/js/3.14712dee.chunk.js.map",
+    "main.css": "/static/css/main.6d27322a.chunk.css",
+    "main.js": "/static/js/main.6c6b992b.chunk.js",
+    "main.js.map": "/static/js/main.6c6b992b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.90a0e71e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.90a0e71e.js.map",
+    "static/css/2.8d98fc34.chunk.css": "/static/css/2.8d98fc34.chunk.css",
+    "static/js/2.00418b87.chunk.js": "/static/js/2.00418b87.chunk.js",
+    "static/js/2.00418b87.chunk.js.map": "/static/js/2.00418b87.chunk.js.map",
+    "static/js/3.09bbca1a.chunk.js": "/static/js/3.09bbca1a.chunk.js",
+    "static/js/3.09bbca1a.chunk.js.map": "/static/js/3.09bbca1a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ea1455b2.chunk.css.map": "/static/css/main.ea1455b2.chunk.css.map",
-    "static/js/2.d129daaf.chunk.js.LICENSE.txt": "/static/js/2.d129daaf.chunk.js.LICENSE.txt"
+    "static/css/2.8d98fc34.chunk.css.map": "/static/css/2.8d98fc34.chunk.css.map",
+    "static/css/main.6d27322a.chunk.css.map": "/static/css/main.6d27322a.chunk.css.map",
+    "static/js/2.00418b87.chunk.js.LICENSE.txt": "/static/js/2.00418b87.chunk.js.LICENSE.txt",
+    "static/media/food-kebab10.jpg": "/static/media/food-kebab10.19bc3857.jpg",
+    "static/media/food-lam.jpg": "/static/media/food-lam.2884842d.jpg",
+    "static/media/food04.jpg": "/static/media/food04.abbff9d3.jpg",
+    "static/media/index.css": "/static/media/panpizza.79a1ef47.ttf",
+    "static/media/food07.jpg": "/static/media/food07.9fc5d16b.jpg",
+    "static/media/haket12.jpg": "/static/media/haket12.735a886d.jpg",
+    "static/media/kebab.jpg": "/static/media/kebab.a25264ff.jpg",
+    "static/media/menu01.jpg": "/static/media/menu01.91d173cc.jpg",
+    "static/media/menu02.jpg": "/static/media/menu02.377a8fe4.jpg",
+    "static/media/menu03.jpg": "/static/media/menu03.87047a38.jpg",
+    "static/media/menu04.jpg": "/static/media/menu04.85165cdc.jpg",
+    "static/media/pizza-haket-logo01.542b045d.png": "/static/media/pizza-haket-logo01.542b045d.png",
+    "static/media/pizza.jpg": "/static/media/pizza.0d522f39.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.80ad7c72.js",
-    "static/js/2.d129daaf.chunk.js",
-    "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.98e617c8.chunk.js"
+    "static/js/runtime-main.90a0e71e.js",
+    "static/css/2.8d98fc34.chunk.css",
+    "static/js/2.00418b87.chunk.js",
+    "static/css/main.6d27322a.chunk.css",
+    "static/js/main.6c6b992b.chunk.js"
   ]
 }
