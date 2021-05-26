@@ -201,7 +201,10 @@
 
 .products-title {
     position: absolute;
-    background: var(--white-clr);
+    padding: 0.1em;
+    border: 1px solid var(--black-clr);
+    border-radius: 5%;
+    background: var(--background-clr);
     color: var(--black-clr);
     font-size: 2em;
     font-family: var(--main-font);
@@ -261,11 +264,39 @@
 
   /* === menu === */
 
-.menu-items {
+.menu-header {
+    margin-top: 2em;
+    color: var(--background-clr);
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 4em;
+    -webkit-animation: products-header 0.6s both;
+    animation: products-header  0.6s both;
+}
+
+.menu-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
+    margin-top: 53em;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.menu-links a {
+    background-color: var(--background-clr);
+    color: var(--black-clr);
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.menu-links a:hover {
+    padding: 1.2em 1.7em;
+    font-size: 20px;
 }
 
 .menu-image {
@@ -279,8 +310,14 @@
     object-fit: cover;
 }
  
+.menu-image li {
+    list-style: none;
+}
 
   /* === About Us === */
+#aboutUs {
+    margin-top: 10em;
+}
 
 .about-us-header {
     color: var(--background-clr);
@@ -291,17 +328,33 @@
 	        animation: products-header  0.6s both;
 }
 
-.aboutUs-oh{
+.mainAddress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-clr);
+}
+
+.about-us-map {
+    padding-top: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUs-oh {
     background: var(--background-clr);
-    margin-top: 60px;
-    }
-    .business-hours {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.business-hours {
     background: #222; 
     padding: 40px 14px;
     margin-top: -15px;
     position: relative;
     }
-    .business-hours:before{
+.business-hours:before{
     content: '';
     width: 23px;
     height: 23px;
@@ -311,22 +364,22 @@
     left: -12px;
     transform: rotate(-45deg);
     z-index: -1;
-    }
-    .business-hours .title {
+}
+.business-hours .title {
     font-size: 20px;
     color: #BBB;
     text-transform: uppercase;
     padding-left: 5px;
     border-left: 4px solid var(--background-clr); 
-    }
-    .business-hours li {
+}
+.business-hours li {
     color: #888;
     line-height: 30px;
     border-bottom: 1px solid #333; 
-    }
-    .business-hours li:last-child {
+}
+.business-hours li:last-child {
     border-bottom: none; 
-    }
-    .business-hours .opening-hours li.today {
+}
+.business-hours .opening-hours li.today {
     color: var(--background-clr); 
-    }
+}

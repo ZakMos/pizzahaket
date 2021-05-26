@@ -14,7 +14,7 @@ class Header extends React.Component {
       let withScroll = $(".noscroll");
       $(window).scroll(function() {
           let scroll = $(window).scrollTop();
-          if (scroll >= 200) {
+          if (scroll >= 300) {
               withScroll.removeClass('noscroll').addClass("withscroll");
           } else  {
               withScroll.removeClass("withscroll").addClass('noscroll');
