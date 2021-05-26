@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Main from './views/Main';
 import Products from './views/Products';
-import Contact from './views/Contact';
+import AboutUs from './views/AboutUs';
 import Footer from './components/Footer';
 import Menu from './views/Menu';
 
@@ -15,7 +15,7 @@ function App() {
         <Main />
         <Products />
         <Menu />
-        <Contact/>
+        <AboutUs/>
       </main>
       <Footer />
     </>
