@@ -265,7 +265,7 @@
   /* === menu === */
 
 .menu-header {
-    margin-top: 2em;
+    margin-top: 1.2em;
     color: var(--background-clr);
     text-align: center;
     font-family: var(--header-font);
@@ -274,12 +274,23 @@
     animation: products-header  0.6s both;
 }
 
+.menu-main {
+    position:sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+}
 .menu-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
-    margin-top: 53em;
+    margin-top: 3em;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
@@ -299,27 +310,23 @@
     font-size: 20px;
 }
 
-.menu-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
+/* .menu-image {
+    top: 100;
+    left: 100;
+    right: 100;
+    bottom: 100;
     object-fit: cover;
-}
+} */
  
 .menu-image li {
     list-style: none;
 }
 
   /* === About Us === */
-#aboutUs {
-    margin-top: 10em;
-}
+
 
 .about-us-header {
+    margin-top: 1.5em;
     color: var(--background-clr);
     text-align: center;
     font-family: var(--header-font);
@@ -383,3 +390,38 @@
 .business-hours .opening-hours li.today {
     color: var(--background-clr); 
 }
+
+/* === Footer ===  */
+
+Footer img {
+    border-radius: 40%;
+}
+
+.foodora {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.foodora img {
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 1em;
+}
+
+
+
+
+/* .fullscreen-image img {
+    width: 700px;
+}
+@media screen and (max-width: 1050px) {
+    Image {
+        width: 700px
+    }
+}
+
+@media  screen and (Max-width: 960px) {
+    
+    } */

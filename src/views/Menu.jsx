@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import  menuQrcode from '../images/MenuQrcode300.png';
-import { ImageGroup, Image } from 'react-fullscreen-image';
+import Carousel from "react-bootstrap/Carousel";
 
 const images = [
     {  img: require('../images/menu01.jpg').default
@@ -12,30 +12,37 @@ const images = [
     {  img: require('../images/menu04.jpg').default
     },
   
-]
-const Menu = () => {
+];
+
+function Menu() {
     const inputRef = useRef(null);
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
     return (
         <>
         <div id="menu"></div>
-        <h1 className="menu-header">Meny</h1> 
-            <ImageGroup>
-                <ul className="menu-image">
-                    {images.map((item, index)=>(
-                        <li key={index}>
-                            <Image src={item.img} alt="Menu"/>
-                        </li>
-                    ))}
-                </ul>
-            </ImageGroup>
+        <div className="menu-main">
+            <h1 className="menu-header">Meny</h1>
+        <Carousel>
+            {images.map((item, i) => (
+                <Carousel.Item key={i} 
+                                activeIndex={index} 
+                                onSelect={handleSelect}> 
+                    <img src={item.img} alt=""/>
+                </Carousel.Item>
+            ))}
+        </Carousel>
         <div className="menu-links">
             <a href="https://bit.ly/3vm4NiI" target="blank" ref={inputRef}>Nedladdningsmeny</a>
             <img src={ menuQrcode } alt="Menu Qr Code" />
         </div>
-
-     
+        </div> 
         </>
-    )
+
+
+    );
 }
 
-export default Menu
+export default Menu;

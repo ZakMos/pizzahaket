@@ -62,9 +62,9 @@ const Contact = () => {
                                 <li>Måndagar <span className="pull-right">11:00-21:00</span></li>
                                 <li>Tisdag <span className="pull-right">11:00-21:00</span></li>
                                 <li>Onsdag <span className="pull-right">11:00-21:00</span></li>
-                                <li>torsdag <span className="pull-right">11:00-21:00</span></li>
-                                <li>Fredag <span className="pull-right">11:00-21:00</span></li>
-                                <li>Lördag <span className="pull-right">11:00-21:00</span></li>
+                                <li>Torsdag <span className="pull-right">11:00-21:00</span></li>
+                                <li>Fredag <span className="pull-right">11:00-22:00</span></li>
+                                <li>Lördag <span className="pull-right">11:00-22:00</span></li>
                             </ul>
                     </div>
                 </div>
