@@ -15,7 +15,7 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Hitta oss',
+        title: 'Om oss',
         url: '/#aboutUs',
         cName: 'nav-links'
     },
