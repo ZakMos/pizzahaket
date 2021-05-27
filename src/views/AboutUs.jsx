@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <>
         <div id="aboutUs"></div>     
-        <h1 className="about-us-header">Hatta Oss</h1> 
+        <h1 className="about-us-header">Om Oss</h1> 
         <div className="container aboutUs-oh">
             <div className="row">
                 <div className="col-sm-2 mainAddress">
@@ -70,7 +70,6 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        
         </>
     )
 }
