@@ -1,10 +1,8 @@
 // import React, { useState } from 'react';
 import React from 'react';
 import { ProductsJson } from '../ProductsJson';
-// import ReactCardFlip from "react-card-flip";
 
 export default function Products  () {
-
     // const [isFlipped, setIsFlipped] = useState(false);
     // const handleClick = () => {
     //     setIsFlipped(!isFlipped)
@@ -17,8 +15,8 @@ export default function Products  () {
             <ul className="products"> {ProductsJson.map((item, index) => {
                 return ( 
                     <li key={index}>
-                          <span className="products-title">{item.title}</span>
-                        <img className="products-image"  src={item.img} alt="" />
+                          <div data-aos="fade-down" data-aos-duration="1000" className="products-title">{item.title}</div>
+                        <div> <img data-aos="fade-up" className="products-image"  src={item.img} alt="" /></div>
                     </li>
                 )
             })}

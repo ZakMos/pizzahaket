@@ -28,15 +28,22 @@ function Menu() {
         <Carousel>
             {images.map((item, i) => (
                 <Carousel.Item key={i} 
-                                activeIndex={index} 
+                                activeindex={index} 
                                 onSelect={handleSelect}> 
                     <img src={item.img} alt=""/>
                 </Carousel.Item>
             ))}
         </Carousel>
         <div className="menu-links">
-            <a href="https://bit.ly/3vm4NiI" target="blank" ref={inputRef}>Nedladdningsmeny</a>
-            <img src={ menuQrcode } alt="Menu Qr Code" />
+            <div data-aos="zoom-in" data-aos-duration="2000"><a 
+            href="https://bit.ly/3vm4NiI" 
+            target="blank" 
+            ref={inputRef}>Nedladdningsmeny</a></div>
+            <div>
+                <img data-aos="flip-up"     data-aos-duration="2000"
+                    src={ menuQrcode } 
+                    alt="Menu Qr Code" />
+            </div>
         </div>
         </div> 
         </>
